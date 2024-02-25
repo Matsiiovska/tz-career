@@ -1,0 +1,55 @@
+
+.sectionHead {
+    margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 375px;
+}
+
+
+.contHead {
+display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 12px;
+    padding: 12px 0px;
+    border-bottom: 1px solid black;
+    
+}
+
+.logo {
+    width: 30px;
+}
+
+.rentalCar {
+font-size: 16px;
+line-height: 1.5;
+    font-weight: 700;
+}
+
+.conImPar {
+    display: flex;
+        align-items: center;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLink {
+    margin-left: 8px;
+    color: black;
+    font-size: 16px;
+        line-height: 1.5;
+        font-weight: 700;
+
+}
+
+.navLink:hover {
+    color: blue;
+    /* Колір тексту посилань при наведенні */
+}
