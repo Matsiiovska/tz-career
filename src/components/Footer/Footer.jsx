@@ -6,10 +6,12 @@ const Footer = () => {
     <footer>
       <div className={css.containerFut}>
         <div className={css.sectionFut}>
-          <h3>Контакти</h3>
-          <p>Адреса: вул. Прикладна, 123</p>
-          <p>Телефон: +123456789</p>
-          <p>Email: info@example.com</p>
+          <h3 className={css.zag}>Contacts</h3>
+          <div className={css.par}>
+            <p>Address: st. Central, 12</p>
+            <p>Телефон: +123456789</p>
+            <p>Email: dovgalyukolya@gmil.com</p>
+          </div>
         </div>
       </div>
     </footer>

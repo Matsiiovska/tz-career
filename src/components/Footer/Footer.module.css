@@ -1,7 +1,28 @@
 .containerFut{
-
+display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 12px;
+    padding: 12px 0px;
+    background-color: black;
+    color: white;
 }
 
 .sectionFut{
-    
+    margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 375px;
+}
+
+.zag {
+font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.par {
+font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
 }
