@@ -3,7 +3,7 @@
     margin: 0 auto;
         padding: 0 20px;
         width: 100%;
-        max-width: 375px;
+        width: 375px;
 }
 
 
@@ -52,4 +52,23 @@ line-height: 1.5;
 .navLink:hover {
     color: blue;
     /* Колір тексту посилань при наведенні */
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .sectionHead {
+            width: 768px;
+        }
+
+ 
+
+}
+
+
+@media screen and (min-width: 1440px) {
+    .sectionHead {
+            width: 1440px;
+        }
+   
 }
