@@ -83,3 +83,7 @@ display: flex;
         line-height: 143%;
         color: #fff;
 }
+
+.SerdechkoActive {
+    fill: blue;
+}
