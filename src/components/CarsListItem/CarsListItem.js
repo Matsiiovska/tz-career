@@ -1,14 +1,10 @@
 import css from './CarsListItem.module.css';
 import sprite from '../../images/sprite.svg';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToFavorites, removeFromFavorites } from '../../redux/slice'; // Оновлено імпорти
-import { selectorsFavoriteCars } from '../../redux/selectors';
+import { useDispatch } from 'react-redux';
+import { addToFavorites, removeFromFavorites } from '../../redux/slice';
 
 export const CarsListItem = ({ car, isFavorite }) => {
   const dispatch = useDispatch();
-  // const favoriteCars = useSelector(selectorsFavoriteCars);
-  //console.log('favoriteCars', favoriteCars);
-  //const isFavorite = favoriteCars.includes(car.id);
 
   const handleClickSerdechko = () => {
     if (isFavorite) {
@@ -30,8 +26,7 @@ export const CarsListItem = ({ car, isFavorite }) => {
     functionalities,
     address,
   } = car;
-  const cityCountry = address?.split(', ').slice(-2); // вирізаємо з адреси два останніх елементи
-
+  const cityCountry = address?.split(', ').slice(-2);
   return (
     <li className={css.Li}>
       <div className={css.ItemsCont}>

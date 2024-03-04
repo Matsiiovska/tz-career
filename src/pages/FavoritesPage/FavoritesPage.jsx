@@ -11,13 +11,11 @@ const FavoritesPage = () => {
     return allCars.find(car => car.id === carId);
   };
 
-  console.log('first', favoriteCars);
-
   return (
     <div>
       <ul>
-        {favoriteCars.map(car => (
-          <CarsListItem key={car.id} car={getCarById(car)} isFavorite={true} />
+        {favoriteCars.map(carId => (
+          <CarsListItem key={carId} car={getCarById(carId)} isFavorite={true} />
         ))}
       </ul>
     </div>
