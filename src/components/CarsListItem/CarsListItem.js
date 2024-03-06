@@ -2,16 +2,30 @@ import css from './CarsListItem.module.css';
 import sprite from '../../images/sprite.svg';
 import { useDispatch } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../../redux/slice';
+import { useState } from 'react';
+import { Modal } from 'components/Modal/Modal';
 
 export const CarsListItem = ({ car, isFavorite }) => {
   const dispatch = useDispatch();
 
+  const [isClicked, setIsClicked] = useState(isFavorite); // стан для відстеження кліку на сердечко
+  const [modalOpen, setModalOpen] = useState(false);
+
   const handleClickSerdechko = () => {
-    if (isFavorite) {
+    if (isClicked) {
       dispatch(removeFromFavorites(car.id));
     } else {
       dispatch(addToFavorites(car.id));
     }
+    setIsClicked(prevState => !prevState);
+  };
+
+  const handleLearnMore = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   const {
@@ -33,14 +47,15 @@ export const CarsListItem = ({ car, isFavorite }) => {
         <div className={css.ItemsContImg}>
           <img className={css.Img} src={img} alt="cars" />
           <svg
-            className={`${css.Serdechko} ${
-              isFavorite ? css.SerdechkoActive : ''
-            }`}
+            className={css.Serdechko}
             onClick={handleClickSerdechko}
             width="18px"
             height="18px"
           >
-            <use href={`${sprite}#icon-heart`}></use>
+            <use
+              href={`${sprite}#icon-heart`}
+              fill={isClicked ? 'blue' : 'currentColor'}
+            ></use>
           </svg>
         </div>
         <div className={css.Text}>
@@ -67,9 +82,10 @@ export const CarsListItem = ({ car, isFavorite }) => {
             <span className={css.onSpan}>{functionalities[0]}</span>
           </div>
         </div>
-        <button type="button" className={css.Button}>
+        <button type="button" className={css.Button} onClick={handleLearnMore}>
           Learn more
         </button>
+        {modalOpen && <Modal closeModal={closeModal} car={car} />}
       </div>
     </li>
   );

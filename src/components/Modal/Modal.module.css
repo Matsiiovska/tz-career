@@ -1,0 +1,143 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 541px;
+    height: 752px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modalOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* замулення */
+}
+
+.modalContent {
+    width: 541px;
+        height: 752px;
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.Img {
+    width: 461px;
+    height: 248px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+.Rad {
+    display: flex;
+    font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: rgba(18, 20, 23, 0.5);
+}
+
+.Rad .onSpan:not(:last-child)::after {
+    content: "|";
+    margin: 0 1px;
+}
+
+.Desc {
+    font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: #121417;
+        margin-bottom: 24px;
+        width: 461px;
+}
+
+.ZagMod {
+    margin-bottom: 8px;
+}
+.vidFuel {
+    margin-bottom: 14px;
+}
+
+
+.zagAccessories{
+    font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: #121417;
+        margin-bottom: 8px;
+}
+.Vids {
+    margin-bottom: 4px;
+}
+
+
+.vidAcc{
+    margin-bottom: 24px;
+}
+
+.ZagRent{
+    font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: #121417;
+        margin-bottom: 8px;
+}
+.Minimum{
+    font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #363535;
+}
+
+.Znach{
+    font-weight: 600;
+        color: #3470ff;
+        background-color: #F9F9F9;
+        border-radius: 35px;
+           /* width: 133px;*/
+            height: 32px;
+                margin-right: 8px;
+}
+
+.Minimum:not(:last-child) {
+    margin-right: 8px;
+}
+.Marg {
+    margin-bottom: 24px;
+}
+
+.RentalCarButt {
+    font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
+        color: #fff;
+        width: 168px;
+        height: 44px;
+        border: none;
+        background-color: #3470FF;
+        border-radius: 12px;
+}

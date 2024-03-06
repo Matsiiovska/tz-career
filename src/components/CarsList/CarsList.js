@@ -7,6 +7,7 @@ import { fetchCarCards } from '../../redux/operations';
 
 const CarsList = ({ cars }) => {
   const dispatch = useDispatch();
+
   const [rendOhog, setRendOhog] = useState(12);
 
   useEffect(() => {
