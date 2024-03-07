@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './Modal.module.css';
+import sprite from '../../images/symbol-defs.svg';
 
 export const Modal = ({ closeModal, car }) => {
   const {
@@ -9,7 +10,6 @@ export const Modal = ({ closeModal, car }) => {
     year,
     img,
     rentalPrice,
-    rentalCompany,
     type,
     functionalities,
     address,
@@ -17,7 +17,6 @@ export const Modal = ({ closeModal, car }) => {
     engineSize,
     description,
     accessories,
-    rentalConditions,
     mileage,
   } = car;
   const cityCountry = address?.split(', ').slice(-2);
@@ -31,15 +30,30 @@ export const Modal = ({ closeModal, car }) => {
 
   // Отримуємо умови щодо страхового депозиту
   const securityDepositConditions = rentalConditionsArray[2];
+
+  const formattedMileage = Number.parseFloat(mileage)
+    .toLocaleString()
+    .replace(/\s/g, ',');
+
+  // Розбиваємо суму і символ долара
+  const parts = rentalPrice.split('$');
+  // Формуємо нову суму зі зміненим порядком
+  const newRentalPrice = `${parts[1]}$${parts[0]}`;
+
   return (
     <div
       className={`${css.modalContainer} ${css.modalOverlay}`}
       onClick={closeModal}
     >
       <div className={css.modalContent} onClick={e => e.stopPropagation()}>
-        <span className={css.close} onClick={closeModal}>
-          &times;
-        </span>
+        <svg
+          className={css.close}
+          onClick={closeModal}
+          width="18px"
+          height="18px"
+        >
+          <use href={`${sprite}#icon-x`}></use>
+        </svg>{' '}
         <img className={css.Img} src={img} alt="cars" />
         <div>
           <h2 className={css.ZagMod}>
@@ -88,10 +102,10 @@ export const Modal = ({ closeModal, car }) => {
             <span className={css.Minimum}>{securityDepositConditions}</span>
 
             <span className={css.Znach}>
-              <span className={css.Minimum}>Mileage:</span> {mileage}
+              <span className={css.Minimum}>Mileage:</span> {formattedMileage}
             </span>
             <span className={css.Znach}>
-              <span className={css.Minimum}>Price: </span> {rentalPrice}
+              <span className={css.Minimum}>Price: </span> {newRentalPrice}
             </span>
           </div>
           <button type="button" className={css.RentalCarButt}>

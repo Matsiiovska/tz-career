@@ -22,10 +22,12 @@ export const CarsListItem = ({ car, isFavorite }) => {
 
   const handleLearnMore = () => {
     setModalOpen(true);
+    document.body.style.overflow = 'hidden'; //заборонити прокручування тіла документа
   };
 
   const closeModal = () => {
     setModalOpen(false);
+    document.body.style.overflow = '';
   };
 
   const {
@@ -52,10 +54,11 @@ export const CarsListItem = ({ car, isFavorite }) => {
             width="18px"
             height="18px"
           >
-            <use
-              href={`${sprite}#icon-heart`}
-              fill={isClicked ? 'blue' : 'currentColor'}
-            ></use>
+            {isClicked ? (
+              <use href={`${sprite}#icon-heart-1`}></use>
+            ) : (
+              <use href={`${sprite}#icon-heart-2`}></use>
+            )}
           </svg>
         </div>
         <div className={css.Text}>
