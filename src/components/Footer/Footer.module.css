@@ -1,6 +1,6 @@
 .containerFut{
 display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     width: 100%;
     align-items: center;
     font-size: 12px;
@@ -16,13 +16,48 @@ display: flex;
         max-width: 375px;
 }
 
-.zag {
+/*.zag {
 font-size: 14px;
     line-height: 1.5;
     font-weight: 700;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
 .par {
 font-size: 14px;
     line-height: 1.5;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    /* Вирівнює елементи вертикально */
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.inlineInfo {
+    display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 10px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+   
+.sectionFut {
+       
+        max-width: 768px;
+    }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+.sectionFut {
+
+        max-width: 1440px;
+    }
+
 }

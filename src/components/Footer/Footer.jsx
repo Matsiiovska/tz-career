@@ -6,11 +6,10 @@ const Footer = () => {
     <footer>
       <div className={css.containerFut}>
         <div className={css.sectionFut}>
-          <h3 className={css.zag}>Contacts</h3>
           <div className={css.par}>
-            <p>Address: st. Central, 12</p>
-            <p>Телефон: +123456789</p>
-            <p>Email: dovgalyukolya@gmil.com</p>
+            <p className={css.inlineInfo}>Address: st. Central, 12</p>
+            <p className={css.inlineInfo}>Телефон: +123456789</p>
+            <p className={css.inlineInfo}>Email: dovgalyukolya@gmil.com</p>
           </div>
         </div>
       </div>

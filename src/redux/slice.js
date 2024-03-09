@@ -16,12 +16,12 @@ const contactsSlice = createSlice({
   initialState,
   reducers: {
     addToFavorites(state, action) {
-      state.favoriteCars.push(action.payload);
+      const carId = action.payload;
+      state.favoriteCars.push(carId); // Додайте автомобіль до списку обраних
     },
     removeFromFavorites(state, action) {
-      state.favoriteCars = state.favoriteCars.filter(
-        carId => carId !== action.payload
-      );
+      const carId = action.payload;
+      state.favoriteCars = state.favoriteCars.filter(id => id !== carId);
     },
   },
   extraReducers: builder =>
