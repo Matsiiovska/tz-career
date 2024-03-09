@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Modal.module.css';
-import sprite from '../../images/symbol-defs.svg';
+import sprite from '../../images/sprite.svg';
 
 export const Modal = ({ closeModal, car }) => {
   const {
@@ -52,12 +52,13 @@ export const Modal = ({ closeModal, car }) => {
           width="18px"
           height="18px"
         >
-          <use href={`${sprite}#icon-x`}></use>
+          <use href={`${sprite}#icon-close-x`}></use>
         </svg>{' '}
         <img className={css.Img} src={img} alt="cars" />
         <div>
           <h2 className={css.ZagMod}>
-            {make} {model}
+            {make} {model + ','}
+            {' ' + year}
           </h2>
           <div className={css.Rad}>
             <span className={css.onSpan}>{cityCountry[0]}</span>

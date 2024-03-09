@@ -10,7 +10,6 @@ position: fixed;
     align-items: center;
     /* Вертикальне центрування */
     z-index: 9999;
-    /* Забезпечення відображення поверх інших елементів */
 }
 
 .modalOverlay {
@@ -24,11 +23,12 @@ position: fixed;
 }
 
 .modalContent {
+    
     width: 541px;
         height: 752px;
     position: relative;
     background-color: white;
-    padding: 20px;
+    padding: 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 10000;
