@@ -1,23 +1,28 @@
 import css from './CarsListItem.module.css';
 import sprite from '../../images/sprite.svg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../../redux/slice';
 import { useState } from 'react';
 import { Modal } from 'components/Modal/Modal';
 
-export const CarsListItem = ({ car, isFavorite }) => {
+export const CarsListItem = ({ car }) => {
   const dispatch = useDispatch();
 
-  const [isClicked, setIsClicked] = useState(isFavorite); // стан для відстеження кліку на сердечко
   const [modalOpen, setModalOpen] = useState(false);
 
+  const isFavorite = useSelector(state =>
+    state.cars.favoriteCars.includes(car.id)
+  );
+
+  //const [isClicked, setIsClicked] = useState(isFavorite); // стан для відстеження кліку на сердечко
+
   const handleClickSerdechko = () => {
-    if (isClicked) {
+    if (isFavorite) {
       dispatch(removeFromFavorites(car.id));
     } else {
       dispatch(addToFavorites(car.id));
     }
-    setIsClicked(prevState => !prevState);
+    /* setIsClicked(prevState => !prevState);*/
   };
 
   const handleLearnMore = () => {
@@ -54,7 +59,7 @@ export const CarsListItem = ({ car, isFavorite }) => {
             width="18px"
             height="18px"
           >
-            {isClicked ? (
+            {isFavorite ? (
               <use href={`${sprite}#icon-heart-1`}></use>
             ) : (
               <use href={`${sprite}#icon-heart-2`}></use>

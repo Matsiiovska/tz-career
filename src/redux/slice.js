@@ -1,15 +1,16 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { fetchCarCards } from './operations';
 
+const getActions = type => extraActions.map(action => action[type]);
+
 const initialState = {
-  cars: [],
+  /* cars: [],*/
   isLoading: false,
   error: null,
   favoriteCars: [],
+  filter: { brend: '', price: null, mileageFrom: null, mileageTo: null },
 };
 const extraActions = [fetchCarCards];
-
-const getActions = type => extraActions.map(action => action[type]);
 
 const contactsSlice = createSlice({
   name: 'cars',
@@ -22,6 +23,12 @@ const contactsSlice = createSlice({
     removeFromFavorites(state, action) {
       const carId = action.payload;
       state.favoriteCars = state.favoriteCars.filter(id => id !== carId);
+    },
+    setFilters: (state, { payload }) => {
+      state.filter.brand = payload.brand || '';
+      state.filter.price = payload.price || null;
+      state.filter.mileageFrom = payload.mileageFrom || null;
+      state.filter.mileageTo = payload.mileageTo || null;
     },
   },
   extraReducers: builder =>
@@ -49,5 +56,6 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
-export const { addToFavorites, removeFromFavorites } = contactsSlice.actions;
+export const { addToFavorites, removeFromFavorites, setFilters } =
+  contactsSlice.actions;
 export const carsReducer = contactsSlice.reducer;

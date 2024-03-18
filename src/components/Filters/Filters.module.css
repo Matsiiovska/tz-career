@@ -1,0 +1,128 @@
+
+.FiltCont {
+    margin-top: 50px;
+width: 859px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.SectionContFil {
+    display: flex;
+        flex-direction: column;
+        gap: 8px;
+}
+
+
+.SelectContLab{
+   /* font-family: var(--font-family);*/
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 129%;
+        color: #8a8a89;
+}
+
+.optionListOpen,
+.optionListClose {
+    border: 1px solid rgba(18, 20, 23, 0.05);
+    border-radius: 14px;
+    width: 224px;
+    max-height: 272px;
+    box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
+    background: #fff;
+    padding: 14px 8px 14px 18px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.optionListOpen {
+    display: block;
+    position: absolute;
+    top: 52px;
+    left: 0;
+}
+
+.optionListClose {
+    display: none;
+}
+
+
+.inputSvgCont {
+display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+.Input {
+   font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 111%;
+        color: #121417;
+        border-radius: 14px;
+            padding: 14px 89px 14px 18px;
+            width: 224px;
+            height: 48px;
+            background: #f7f7fb;
+            border: none;
+            outline: none;
+}
+
+
+
+.Svg {
+    width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        stroke: currentColor;
+        fill: transparent;
+       /* transition: transform var(--transition-duration) var(--transition-time-function);*/
+}
+
+
+
+.ButtonSearch {
+    font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+            padding: 14px 44px;
+            width: 136px;
+            height: 48px;
+            background: #3470ff;
+}
+
+.BrandUl {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(18, 20, 23, 0.2);
+background: #fff;            
+    display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-height: 244px;
+        overflow-y: auto;
+        cursor: pointer;
+
+}
+
+.BrandUl::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.BrandUl::-webkit-scrollbar-thumb {
+    background-color: rgba(18, 20, 23, 0.05);
+    border-radius: 10px;
+}

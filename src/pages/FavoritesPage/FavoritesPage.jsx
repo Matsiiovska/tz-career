@@ -15,13 +15,8 @@ const FavoritesPage = () => {
   return (
     <div>
       <ul className={css.Ul}>
-        {favoriteCars.map((carId, index) => (
-          <CarsListItem
-            key={carId}
-            car={getCarById(carId)}
-            isFavorite={true}
-            index={index}
-          />
+        {favoriteCars.map(carId => (
+          <CarsListItem key={carId} car={getCarById(carId)} />
         ))}
       </ul>
     </div>
