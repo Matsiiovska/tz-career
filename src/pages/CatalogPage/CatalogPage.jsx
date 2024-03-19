@@ -6,12 +6,13 @@ import { Filters } from 'components/Filters/Filters';
 
 const CatalogPage = () => {
   const cars = useSelector(selectorsCars);
+  console.log('cars', cars);
 
   return (
-    <>
+    <div>
       <Filters />
       <CarsList cars={cars} />
-    </>
+    </div>
   );
 };
 

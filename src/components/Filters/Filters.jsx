@@ -46,15 +46,6 @@ export const Filters = () => {
   };
 
   //закриття випадаючого списку при кліку на будь яку область документа
-  const handleCloseDropdown = e => {
-    if (
-      e.target.dataset.type !== 'brand' &&
-      e.target.dataset.type !== 'price'
-    ) {
-      setOpen(initOpen);
-      document.removeEventListener('click', handleCloseDropdown);
-    }
-  };
 
   //wrong value in mileage
   const handleWrongValue = (value, form) => {
@@ -126,6 +117,16 @@ export const Filters = () => {
     );
   };
 
+  const handleMileage = () => {
+    mileageFrom !== '' &&
+      Number(mileageFrom) > mileageTo &&
+      handleWrongValue(mileageFrom);
+  };
+
+  const formatNumber = number => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   return (
     <div className={css.FiltCont}>
       <div className={css.SectionContFil}>
@@ -195,17 +196,17 @@ export const Filters = () => {
             onChange={handleChange}
             onFocus={() => setIsPriceOpen(true)}
             onBlur={() => setIsPriceOpen(false)}
-            className={css.Input}
+            className={css.inputPrice}
             placeholder="To $"
           />
           {isPriceOpen && (
             <div
               className={`${css.optionList} ${
-                isPriceOpen ? css.optionListOpen : css.optionListClose
+                isPriceOpen ? css.optionListOpenPrice : css.optionListClosePrice
               } ${css.dropdownContainer}`}
               onMouseDown={handlePriceClick}
             >
-              <ul className={css.BrandUl}>
+              <ul className={css.priceUl}>
                 {priceArray.map((price, index) => (
                   <li className={css.Brand} key={index}>
                     {price}
@@ -214,6 +215,34 @@ export const Filters = () => {
               </ul>
             </div>
           )}
+        </div>
+      </div>
+      <div className={css.MileageFromTo}>
+        <label htmlFor="from-to" className={css.LabelMileage}>
+          Car mileage / km
+        </label>
+        <div className={css.inputContMileage}>
+          <div className={css.spanInput}>
+            <span className={css.textMileage}>From:</span>
+            <input
+              type="text"
+              name="mileageFrom"
+              value={formatNumber(mileageFrom)}
+              className={css.From}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={css.spanInput}>
+            <span className={css.textMileage}>To:</span>
+            <input
+              type="text"
+              name="mileageTo"
+              value={formatNumber(mileageTo)}
+              className={css.To}
+              onChange={handleChange}
+              onBlur={handleMileage}
+            />
+          </div>
         </div>
       </div>
       <button

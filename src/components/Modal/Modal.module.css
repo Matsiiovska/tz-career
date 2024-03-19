@@ -25,7 +25,6 @@ position: fixed;
 .modalContent {
     
     width: 541px;
-        height: 752px;
     position: relative;
     background-color: white;
     padding: 40px;
@@ -56,6 +55,7 @@ position: fixed;
 
 .Rad {
     display: flex;
+    flex-wrap: wrap;
     font-weight: 400;
         font-size: 12px;
         line-height: 150%;

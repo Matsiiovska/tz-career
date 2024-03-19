@@ -19,7 +19,7 @@ width: 859px;
 
 
 .SelectContLab{
-   /* font-family: var(--font-family);*/
+   font-family: var(--font-family);
         font-weight: 500;
         font-size: 14px;
         line-height: 129%;
@@ -38,6 +38,18 @@ width: 859px;
     cursor: pointer;
     z-index: 100;
 }
+.optionListOpenPrice,
+.optionListClosePrice {
+    border: 1px solid rgba(18, 20, 23, 0.05);
+    border-radius: 14px;
+    width: 126px;
+    max-height: 188px;
+    box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
+    background: #fff;
+    padding: 14px 8px 14px 18px;
+    cursor: pointer;
+    z-index: 100;
+}
 
 .optionListOpen {
     display: block;
@@ -47,6 +59,16 @@ width: 859px;
 }
 
 .optionListClose {
+    display: none;
+}
+.optionListOpenPrice {
+    display: block;
+    position: absolute;
+    top: 52px;
+    left: 0;
+}
+
+.optionListClosePrice {
     display: none;
 }
 
@@ -70,6 +92,20 @@ display: flex;
             background: #f7f7fb;
             border: none;
             outline: none;
+}
+.inputPrice {
+    font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 111%;
+        color: #121417;
+        border-radius: 14px;
+        padding: 14px 89px 14px 18px;
+        width: 125px;
+        height: 48px;
+        background: #f7f7fb;
+        border: none;
+        outline: none;
 }
 
 
@@ -121,6 +157,20 @@ background: #fff;
         cursor: pointer;
 
 }
+.priceUl {
+    font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: rgba(18, 20, 23, 0.2);
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-height: 125px;
+        overflow-y: auto;
+        cursor: pointer;
+}
 
 .BrandUl::-webkit-scrollbar {
     width: 8px;
@@ -131,3 +181,82 @@ background: #fff;
     background-color: rgba(18, 20, 23, 0.05);
     border-radius: 10px;
 }
+
+.priceUl::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.priceUl::-webkit-scrollbar-thumb {
+    background-color: rgba(18, 20, 23, 0.05);
+    border-radius: 10px;
+}
+
+
+.MileageFromTo{
+    display: flex;
+        flex-direction: column;
+        gap: 8px;
+}
+
+.LabelMileage {
+    font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 129%;
+        color: #8a8a89;
+}
+
+
+.inputContMileage{
+    display: flex;
+}
+
+.spanInput {
+    position: relative;
+
+   
+}
+
+ .From {
+    border: none;
+        border-right: 1px solid var(--border-color);
+        border-radius: 14px 0 0 14px;
+        width: 160px;
+        height: 48px;
+        background: var(--from-to-color);
+        padding-left: 86px;
+        outline: none;
+        color: #121417;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.11;
+ }
+
+ .To {
+    border-radius: 0 14px 14px 0;
+        width: 160px;
+        height: 48px;
+        outline: none;
+        border: none;
+        background: var(--from-to-color);
+        padding-left: 62px;
+        color: #121417;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.11;
+ }
+
+
+ .textMileage {
+position: absolute;
+    top: 14px;
+    left: 40px;
+    color: #121417;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.11;
+ }
