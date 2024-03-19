@@ -12,23 +12,27 @@ export const selectFavoriteCars = state => state.cars.favoriteCars;
 export const selectVisibleCars = createSelector(
   [selectorsCars, selectFilter],
   (cars, { brand, price, mileageFrom, mileageTo }) => {
+    if (!Array.isArray(cars)) {
+      return [];
+    }
+
     return cars
       .filter(one =>
         brand !== ''
           ? one.make.toLowerCase().includes(brand.toLowerCase())
-          : one
+          : true
       )
       .filter(one => {
         const formattedPrice = Number(
           one.rentalPrice.slice(1, one.rentalPrice.length)
         );
-        return price ? formattedPrice <= Number(price) : one;
+        return price ? formattedPrice <= Number(price) : true;
       })
       .filter(one =>
-        Number(mileageFrom) ? one.mileage >= Number(mileageFrom) : one
+        Number(mileageFrom) ? one.mileage >= Number(mileageFrom) : true
       )
       .filter(one =>
-        Number(mileageTo) ? one.mileage <= Number(mileageTo) : one
+        Number(mileageTo) ? one.mileage <= Number(mileageTo) : true
       );
   }
 );

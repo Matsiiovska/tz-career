@@ -18,7 +18,7 @@ const contactsSlice = createSlice({
   reducers: {
     addToFavorites(state, action) {
       const carId = action.payload;
-      state.favoriteCars.push(carId); // Додайте автомобіль до списку обраних
+      state.favoriteCars.push(carId);
     },
     removeFromFavorites(state, action) {
       const carId = action.payload;
