@@ -24,4 +24,9 @@ width: 1440px;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #3470ff;
+    background-color: transparent;
+}
+.Butt:hover,
+.Butt:focus {
+    color: var(--active-color);
 }

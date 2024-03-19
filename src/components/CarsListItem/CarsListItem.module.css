@@ -84,7 +84,11 @@ display: flex;
         color: #fff;
 }
 
-.SerdechkoActive {
-    fill: blue;
+.Button:hover,
+.Button:focus{
+background-color: var(--active-color);
 }
+/*.SerdechkoActive {
+    fill: blue;
+}*/
 

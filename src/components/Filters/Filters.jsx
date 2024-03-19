@@ -5,7 +5,6 @@ import toast from 'react-hot-toast';
 import { setFilters } from '../../redux/slice';
 import css from './Filters.module.css';
 import { makeArray } from 'func/makeArrey';
-import { selectFilters } from '../../redux/selectors';
 
 import sprite from '../../images/sprite.svg';
 import { priceArray } from 'func/priceArray';
@@ -109,8 +108,7 @@ export const Filters = () => {
   };
 
   //submit
-  const handleSearchClick = e => {
-    e.preventDefault();
+  const handleSearchClick = () => {
     dispatch(setFilters({ brand, price, mileageFrom, mileageTo }));
   };
 
@@ -219,7 +217,7 @@ export const Filters = () => {
         </div>
       </div>
       <button
-        type="button"
+        type="submit"
         className={css.ButtonSearch}
         onClick={handleSearchClick}
       >

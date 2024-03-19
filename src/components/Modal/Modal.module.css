@@ -134,13 +134,23 @@ position: fixed;
 }
 
 .RentalCarButt {
-    font-weight: 600;
-        font-size: 14px;
-        line-height: 143%;
-        color: #fff;
+    border-radius: 12px;
+        padding: 12px 50px;
         width: 168px;
         height: 44px;
+        background: var(--brand-color);
         border: none;
-        background-color: #3470FF;
-        border-radius: 12px;
+        cursor: pointer;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.43;
+        color: var(--invent-color);
+        text-decoration: none;
+        transition: background-color var(--transition-duration) var(--transition-time-function);
+}
+
+.RentalCarButt:hover,
+.RentalCarButt:focus {
+background: var(--active-color);
 }

@@ -101,6 +101,11 @@ display: flex;
             background: #3470ff;
 }
 
+.ButtonSearch:hover,
+.ButtonSearch:focus {
+    background: var(--active-color);
+}
+
 .BrandUl {
     font-family: "Manrope", sans-serif;
     font-weight: 500;

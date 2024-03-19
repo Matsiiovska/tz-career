@@ -109,9 +109,9 @@ export const Modal = ({ closeModal, car }) => {
               <span className={css.Minimum}>Price: </span> {newRentalPrice}
             </span>
           </div>
-          <button type="button" className={css.RentalCarButt}>
+          <a href="tel:+380730000000" className={css.RentalCarButt}>
             Rental car
-          </button>
+          </a>
         </div>
       </div>
     </div>
