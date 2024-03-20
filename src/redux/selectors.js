@@ -18,21 +18,21 @@ export const selectVisibleCars = createSelector(
 
     return cars
       .filter(one =>
-        brand !== ''
+        brand !== '' && one.make
           ? one.make.toLowerCase().includes(brand.toLowerCase())
-          : true
+          : one
       )
       .filter(one => {
         const formattedPrice = Number(
           one.rentalPrice.slice(1, one.rentalPrice.length)
         );
-        return price ? formattedPrice <= Number(price) : true;
+        return price ? formattedPrice <= Number(price) : one;
       })
       .filter(one =>
-        Number(mileageFrom) ? one.mileage >= Number(mileageFrom) : true
+        Number(mileageFrom) ? one.mileage >= Number(mileageFrom) : one
       )
       .filter(one =>
-        Number(mileageTo) ? one.mileage <= Number(mileageTo) : true
+        Number(mileageTo) ? one.mileage <= Number(mileageTo) : one
       );
   }
 );
