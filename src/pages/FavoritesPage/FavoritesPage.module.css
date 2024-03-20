@@ -1,0 +1,13 @@
+.Ul {
+    padding-top: 50px;
+    padding-left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    gap: 29px;
+    width: 1440px;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin: 0 auto;
+    min-height: 800px;
+}

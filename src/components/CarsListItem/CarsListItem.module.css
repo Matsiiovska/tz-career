@@ -1,0 +1,94 @@
+.Li {
+    width: 274px;
+    height: 426px;
+    box-sizing: border-box;
+       
+}
+
+
+
+.WidCar{
+    min-height: 390px;
+}
+.ItemsContImg{
+    position: relative;
+        display: inline-block;
+
+}
+
+.Img {
+    width: 274px;
+    height: 268px;
+    border-radius: 14px;
+    display: block;
+    
+}
+
+.Serdechko {
+position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.Text {
+    padding-top: 14px;
+    padding-bottom: 28px;
+    
+}
+.onRad{
+    display: flex;
+    justify-content: space-between;
+            font-family: var(--font-family);
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--main-color);
+}
+
+.onSpanModel {
+    color: var(--brand-color);
+}
+
+.onRost {
+display: flex;
+    gap: 5px;
+}
+
+
+.Rad {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+            font-family: var(--font-family);
+        font-size: 12px;
+        line-height: 150%;
+        color: var(--backdrop-color);
+            overflow: hidden;
+}
+
+.Rad .onSpan:not(:last-child)::after {
+    content: "|";
+    margin: 0 2px;
+}
+
+.Button{
+    width: 274px;
+    height: 44px;
+    background-color: var(--brand-color);
+    border-radius: 15px;
+    border:none;
+    font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--invent-color);
+}
+
+.Button:hover,
+.Button:focus{
+background-color: var(--active-color);
+}
+
