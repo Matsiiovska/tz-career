@@ -11,7 +11,7 @@ const FavoritesPage = () => {
   const getCarById = carId => {
     return allCars.find(car => car.id === carId);
   };
-
+  //
   return (
     <div>
       <ul className={css.Ul}>
