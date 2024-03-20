@@ -8,12 +8,14 @@ import { Modal } from 'components/Modal/Modal';
 export const CarsListItem = ({ car }) => {
   const dispatch = useDispatch();
 
+  console.log(car);
   const [modalOpen, setModalOpen] = useState(false);
 
   const isFavorite = useSelector(state =>
-    state.cars.favoriteCars.includes(car.id)
+    state.cars.favoriteCars.includes(car ? car.id : 0)
   );
 
+  if (!car) return <li className={css.Li}></li>;
   //const [isClicked, setIsClicked] = useState(isFavorite); // стан для відстеження кліку на сердечко
 
   const handleClickSerdechko = () => {

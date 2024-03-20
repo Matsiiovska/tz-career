@@ -5,10 +5,14 @@ import CarsListItem from '../../components/CarsListItem/CarsListItem';
 import css from './FavoritesPage.module.css';
 
 const FavoritesPage = () => {
-  const favoriteCars = useSelector(selectorsFavoriteCars);
-  const allCars = useSelector(selectorsCars);
+  const favoriteCars = useSelector(selectorsFavoriteCars) || [];
+  const allCars = useSelector(selectorsCars) || [];
+
+  console.log(favoriteCars, allCars);
 
   const getCarById = carId => {
+    if (!allCars) return undefined;
+
     return allCars.find(car => car.id === carId);
   };
   //
