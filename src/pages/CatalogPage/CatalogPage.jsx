@@ -19,7 +19,7 @@ const CatalogPage = () => {
   return (
     <div>
       <Filters />
-      {cars.length ? (
+      {cars && cars.length ? (
         <CarsList cars={cars} />
       ) : (
         <p className={css.SoryNon}>
