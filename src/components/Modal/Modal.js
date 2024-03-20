@@ -46,14 +46,16 @@ export const Modal = ({ closeModal, car }) => {
       onClick={closeModal}
     >
       <div className={css.modalContent} onClick={e => e.stopPropagation()}>
-        <svg
+        <div className={css.cross} onClick={closeModal}></div>
+
+        {/*<svg
           className={css.close}
           onClick={closeModal}
           width="18px"
           height="18px"
         >
-          <use href={`${sprite}#icon-chevron-down-1`}></use>
-        </svg>{' '}
+          <use href={`${sprite}#icon-close-x`}></use>
+  </svg>{' '}*/}
         <img className={css.Img} src={img} alt="cars" />
         <div>
           <h2 className={css.ZagMod}>
