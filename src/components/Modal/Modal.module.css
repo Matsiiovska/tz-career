@@ -6,10 +6,9 @@ position: fixed;
     height: 100%;
     display: flex;
     justify-content: center;
-    /* Горизонтальне центрування */
     align-items: center;
     /* Вертикальне центрування */
-    z-index: 9999;
+    /*z-index: 9999;*/
 }
 
 .modalOverlay {
@@ -37,13 +36,16 @@ position: fixed;
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
+    font-family: var(--font-family);
     font-size: 20px;
     color: #999;
 }
 
 .close:hover {
-    color: #000;
+    color: var(--second-family);
 }
 
 .Img {
@@ -56,10 +58,11 @@ position: fixed;
 .Rad {
     display: flex;
     flex-wrap: wrap;
+    font-family: var(--font-family);
     font-weight: 400;
         font-size: 12px;
         line-height: 150%;
-        color: rgba(18, 20, 23, 0.5);
+        color: (--backdrop-color);
 }
 
 .Rad .onSpan:not(:last-child)::after {
@@ -68,10 +71,11 @@ position: fixed;
 }
 
 .Desc {
+    font-family: var(--font-family);
     font-weight: 400;
         font-size: 14px;
         line-height: 143%;
-        color: #121417;
+        color: var(--main-color);
         margin-bottom: 24px;
         width: 461px;
 }
@@ -85,6 +89,7 @@ position: fixed;
 
 
 .zagAccessories{
+font-family: var(--font-family);
     font-weight: 500;
         font-size: 14px;
         line-height: 143%;
@@ -101,6 +106,7 @@ position: fixed;
 }
 
 .ZagRent{
+    font-family: var(--font-family);
     font-weight: 500;
         font-size: 14px;
         line-height: 143%;
@@ -118,8 +124,8 @@ position: fixed;
 
 .Znach{
     font-weight: 600;
-        color: #3470ff;
-        background-color: #F9F9F9;
+        color: var(--brand-color);
+        background-color: var(--from-to-color);
         border-radius: 35px;
            /* width: 133px;*/
             height: 32px;

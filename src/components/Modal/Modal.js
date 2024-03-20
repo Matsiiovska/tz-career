@@ -52,7 +52,7 @@ export const Modal = ({ closeModal, car }) => {
           width="18px"
           height="18px"
         >
-          <use href={`${sprite}#icon-close-x`}></use>
+          <use href={`${sprite}#icon-chevron-down-1`}></use>
         </svg>{' '}
         <img className={css.Img} src={img} alt="cars" />
         <div>

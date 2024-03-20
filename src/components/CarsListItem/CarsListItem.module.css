@@ -5,12 +5,10 @@
        
 }
 
-/*.ItemsCont {
 
-}*/
 
 .WidCar{
-    min-height: 388px;
+    min-height: 390px;
 }
 .ItemsContImg{
     position: relative;
@@ -44,14 +42,15 @@ position: absolute;
 .onRad{
     display: flex;
     justify-content: space-between;
+            font-family: var(--font-family);
     font-weight: 500;
         font-size: 16px;
         line-height: 150%;
-        color: #121417;
+        color: var(--main-color);
 }
 
 .onSpanModel {
-    color: #3470ff;
+    color: var(--brand-color);
 }
 
 .onRost {
@@ -64,9 +63,10 @@ display: flex;
     display: flex;
     flex-wrap: wrap;
     font-weight: 400;
+            font-family: var(--font-family);
         font-size: 12px;
         line-height: 150%;
-        color: rgba(18, 20, 23, 0.5);
+        color: var(--backdrop-color);
             overflow: hidden;
 }
 
@@ -78,20 +78,17 @@ display: flex;
 .Button{
     width: 274px;
     height: 44px;
-    background-color: #3470FF;
+    background-color: var(--brand-color);
     border-radius: 15px;
     border:none;
     font-weight: 600;
         font-size: 14px;
         line-height: 143%;
-        color: #fff;
+        color: var(--invent-color);
 }
 
 .Button:hover,
 .Button:focus{
 background-color: var(--active-color);
 }
-/*.SerdechkoActive {
-    fill: blue;
-}*/
 

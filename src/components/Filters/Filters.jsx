@@ -134,7 +134,7 @@ export const Filters = () => {
         <div className={css.inputSvgCont}>
           <svg
             className={css.Svg}
-            onClick={() => handleOpen('brand')}
+            /* onClick={() => handleOpen('brand')}*/
             data-type="brand"
             width="18px"
             height="18px"
@@ -150,7 +150,8 @@ export const Filters = () => {
             value={brand}
             name="brand"
             onChange={handleChange}
-            onFocus={() => setIsBrandOpen(true)}
+            onClick={() => handleOpen('brand')} // Зміна обробника подій з onFocus на onClick
+            /*onFocus={() => setIsBrandOpen(true)}*/
             onBlur={() => setIsBrandOpen(false)}
             className={css.Input}
             placeholder="Enter the text"
@@ -178,7 +179,7 @@ export const Filters = () => {
         <div className={css.inputSvgCont}>
           <svg
             className={css.Svg}
-            onClick={() => handleOpen('price')}
+            /* onClick={() => handleOpen('price')}*/
             data-type="price"
             width="18px"
             height="18px"
@@ -194,7 +195,8 @@ export const Filters = () => {
             value={price}
             name="price"
             onChange={handleChange}
-            onFocus={() => setIsPriceOpen(true)}
+            onClick={() => handleOpen('price')} // Зміна обробника подій з onFocus на onClick
+            /*onFocus={() => setIsPriceOpen(true)}*/
             onBlur={() => setIsPriceOpen(false)}
             className={css.inputPrice}
             placeholder="To $"

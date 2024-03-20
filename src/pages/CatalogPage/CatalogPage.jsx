@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectVisibleCars, selectorsCars } from '../../redux/selectors';
 import { Filters } from 'components/Filters/Filters';
 import { fetchCarCards } from '../../redux/operations';
+import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,14 @@ const CatalogPage = () => {
   return (
     <div>
       <Filters />
-      <CarsList cars={cars} />
+      {cars.length ? (
+        <CarsList cars={cars} />
+      ) : (
+        <p className={css.SoryNon}>
+          Dear customer, nothing was found for your request. Apply the filter
+          again on the other side.
+        </p>
+      )}
     </div>
   );
 };

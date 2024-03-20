@@ -7,7 +7,7 @@ display: flex;
     background-image: url('../../images/cart.jpg');
         background-size: cover;
         height: 100vh;
-        color:white;
+        color: var(--invent-color);
 }
 
 
@@ -16,19 +16,22 @@ display: flex;
     margin: 0 auto;
         padding: 40px 20px;
         width: 100%;
-        max-width: 375px;
+        width: 800px;
 }
 
 .welcomHome{
+    font-family: var(--font-family);
     width: 220px;  
             font-size: 16px;
 }
 .But {
     background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        padding: 10px 20px;
-        font-size: 16px;
+    margin-top: 80px;
+        color: var(--invent-color);
+        border: 1px solid var(--invent-color);
+        padding: 15px 20px;
+        font-family: var(--font-family);
+                font-size: 30px;
         border-radius: 10px;
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -36,12 +39,17 @@ display: flex;
 
 .abzac{
     margin-bottom: 40px;
+    margin-top: 150px;
+    text-align: center;
+            font-family: var(--font-family);
+                font-size: 50px;
+                width: 800px;
 }
 
 .But:hover,
 .But:focus {
-    background-color: white;
-    color: black;
-    border-color: white;
+    background-color: var(--invent-color);
+    color: var(--card-text-color);
+    border-color: var(--invent-color);
     outline: none;
 }
