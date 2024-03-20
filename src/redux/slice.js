@@ -8,7 +8,7 @@ const initialState = {
   isLoading: false,
   error: null,
   favoriteCars: [],
-  filter: { brend: '', price: null, mileageFrom: null, mileageTo: null },
+  filter: { brand: '', price: null, mileageFrom: null, mileageTo: null },
 };
 const extraActions = [fetchCarCards];
 
