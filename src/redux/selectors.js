@@ -18,7 +18,7 @@ export const selectVisibleCars = createSelector(
 
     return cars
       .filter(one =>
-        brand !== '' && one.make
+        brand !== '' && one.make !== undefined
           ? one.make.toLowerCase().includes(brand.toLowerCase())
           : one
       )
