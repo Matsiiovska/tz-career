@@ -89,13 +89,13 @@ export const Filters = () => {
   const handleBrandClick = event => {
     const value = event.target.textContent;
     setBrand(value);
-    setIsBrandOpen(false); // Закриваємо список після вибору елемента
+    setOpen(prev => ({ ...prev, brand: false })); // Закриваємо список марок
   };
   //click on price
   const handlePriceClick = e => {
     const value = e.target.textContent;
     setPrice(value.toString());
-    setIsPriceOpen(false); // Закриваємо список після вибору елемента
+    setOpen(prev => ({ ...prev, price: false })); // Закриваємо список марок
   };
 
   //submit
@@ -150,7 +150,7 @@ export const Filters = () => {
             value={brand}
             name="brand"
             onChange={handleChange}
-            onClick={() => handleOpen('brand')} // Зміна обробника подій з onFocus на onClick
+            onClick={() => handleOpen('brand')}
             /*onFocus={() => setIsBrandOpen(true)}*/
             onBlur={() => setIsBrandOpen(false)}
             className={css.Input}
@@ -177,13 +177,7 @@ export const Filters = () => {
       <div className={css.SectionContFil}>
         <label className={css.SelectContLab}>Price/ 1 hour</label>
         <div className={css.inputSvgCont}>
-          <svg
-            className={css.Svg}
-            /* onClick={() => handleOpen('price')}*/
-            data-type="price"
-            width="18px"
-            height="18px"
-          >
+          <svg className={css.Svg} data-type="price" width="18px" height="18px">
             {isOpen.price ? (
               <use href={`${sprite}#icon-chevron-down`}></use>
             ) : (
