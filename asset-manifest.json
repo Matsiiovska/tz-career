@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/tz-career/static/css/main.5d87d6df.css",
-    "main.js": "/tz-career/static/js/main.418c91ee.js",
+    "main.js": "/tz-career/static/js/main.7d3b7235.js",
     "static/css/784.f414de86.chunk.css": "/tz-career/static/css/784.f414de86.chunk.css",
-    "static/js/784.80718b17.chunk.js": "/tz-career/static/js/784.80718b17.chunk.js",
+    "static/js/784.a46d0c7f.chunk.js": "/tz-career/static/js/784.a46d0c7f.chunk.js",
     "static/css/480.a372b483.chunk.css": "/tz-career/static/css/480.a372b483.chunk.css",
-    "static/js/480.3fc08337.chunk.js": "/tz-career/static/js/480.3fc08337.chunk.js",
+    "static/js/480.69ef132c.chunk.js": "/tz-career/static/js/480.69ef132c.chunk.js",
     "static/media/cart.jpg": "/tz-career/static/media/cart.fa3c8f942b88947718c4.jpg",
     "static/media/sprite.svg": "/tz-career/static/media/sprite.35194636014d27fb20cd895a255b8e61.svg",
     "index.html": "/tz-career/index.html",
     "main.5d87d6df.css.map": "/tz-career/static/css/main.5d87d6df.css.map",
-    "main.418c91ee.js.map": "/tz-career/static/js/main.418c91ee.js.map",
+    "main.7d3b7235.js.map": "/tz-career/static/js/main.7d3b7235.js.map",
     "784.f414de86.chunk.css.map": "/tz-career/static/css/784.f414de86.chunk.css.map",
-    "784.80718b17.chunk.js.map": "/tz-career/static/js/784.80718b17.chunk.js.map",
+    "784.a46d0c7f.chunk.js.map": "/tz-career/static/js/784.a46d0c7f.chunk.js.map",
     "480.a372b483.chunk.css.map": "/tz-career/static/css/480.a372b483.chunk.css.map",
-    "480.3fc08337.chunk.js.map": "/tz-career/static/js/480.3fc08337.chunk.js.map"
+    "480.69ef132c.chunk.js.map": "/tz-career/static/js/480.69ef132c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d87d6df.css",
-    "static/js/main.418c91ee.js"
+    "static/js/main.7d3b7235.js"
   ]
 }
