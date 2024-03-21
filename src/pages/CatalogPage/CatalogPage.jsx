@@ -12,6 +12,7 @@ const CatalogPage = () => {
   const cars = useSelector(selectVisibleCars);
   /*console.log('cars', cars);*/
   const allCars = useSelector(selectorsCars);
+
   useEffect(() => {
     if (!allCars || !allCars.length) dispatch(fetchCarCards());
   }, [dispatch, allCars]);
